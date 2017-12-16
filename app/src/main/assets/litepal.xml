@@ -7,7 +7,7 @@
     <list>
         <mapping class="com.example.a15616.douweather.db.Province"/>
         <mapping class="com.example.a15616.douweather.db.City"/>
-        <mapping class="com.example.a15616.douweather.db.county"/>
+        <mapping class="com.example.a15616.douweather.db.County"/>
     </list>
 
 </litepal>

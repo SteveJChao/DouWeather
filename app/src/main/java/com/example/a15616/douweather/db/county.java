@@ -13,11 +13,11 @@ import org.litepal.crud.DataSupport;
  * weatherId 天气查询Id
  * cityId 城市Id
  */
-public class county extends DataSupport {
+public class County extends DataSupport {
 
     private int id;
     private String countyName;
-    private int weatherId;
+    private String weatherId;
     private int cityId;
 
     /**
@@ -56,7 +56,7 @@ public class county extends DataSupport {
      * weatherId的setter
      * @param weatherId
      */
-    public void setWeatherId(int weatherId) {
+    public void setWeatherId(String weatherId) {
         this.weatherId = weatherId;
     }
 
@@ -64,7 +64,7 @@ public class county extends DataSupport {
      * weatherId的getter
      * @return
      */
-    public int getWeatherId() {
+    public String getWeatherId() {
         return weatherId;
     }
 

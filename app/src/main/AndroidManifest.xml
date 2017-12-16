@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.a15616.douweather">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
