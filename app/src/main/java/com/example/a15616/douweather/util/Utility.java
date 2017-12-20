@@ -5,10 +5,13 @@ package com.example.a15616.douweather.util;
  */
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.example.a15616.douweather.db.City;
 import com.example.a15616.douweather.db.County;
 import com.example.a15616.douweather.db.Province;
+import com.example.a15616.douweather.gson.Weather;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -93,5 +96,25 @@ public class Utility {
             }
         }
         return false;
+    }
+
+    /**
+     * 将返回的JSON数据解析成Weather实体类
+     * @param response
+     * @return
+     */
+    public static Weather handleWeatherResponse(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            for (int i = 0; i < jsonArray.length(); i++) {
+                String weatherContent = jsonArray.getJSONObject(0).toString();
+            }
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent, Weather.class);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
