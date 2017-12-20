@@ -1,5 +1,6 @@
 package com.example.a15616.douweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.gesture.GestureLibraries;
 import android.graphics.Color;
@@ -25,6 +26,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.a15616.douweather.gson.Forecast;
 import com.example.a15616.douweather.gson.Weather;
+import com.example.a15616.douweather.service.AutoUpdateService;
 import com.example.a15616.douweather.util.HttpUtil;
 import com.example.a15616.douweather.util.Utility;
 
@@ -225,6 +227,10 @@ public class WeatherActivity extends AppCompatActivity {
         String sport = "运动指数： " + weather.suggestion.sport.info;
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+
+        //启动后台自动更新天气的服务
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
     public void loadBingPic() {
