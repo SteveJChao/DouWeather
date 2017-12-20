@@ -184,7 +184,7 @@ public class WeatherActivity extends AppCompatActivity {
         SharedPreferences.Editor editor =
                 PreferenceManager.getDefaultSharedPreferences(WeatherActivity.this)
                         .edit();
-        editor.clear();
+        editor.remove("weather");
 
     }
 
