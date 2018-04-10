@@ -6,4 +6,4 @@
 <img src="https://github.com/SteveJChao/DouWeather/blob/master/Screenshot/weather1.png" width="25%" height="25%" />
 <img src="https://github.com/SteveJChao/DouWeather/blob/master/Screenshot/weather2.png" width="25%" height="25%" />
 
-<img src="https://github.com/SteveJChao/DouWeather/blob/master/Screenshot/icon.png" width="50%" height="50%" />
+<img src="https://github.com/SteveJChao/DouWeather/blob/master/Screenshot/icon.png" width="25%" height="25%" />
